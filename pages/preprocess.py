@@ -60,3 +60,7 @@ if load or st.session_state.state:
   X_test /= 255 #change x_test value between 0 - 1 
   y_train = to_categorical (y_train, 2) #change label to binary / categorical: [1 0 0 0] = 0, [0 1 0 0] = 1, so on
   y_test = to_categorical (y_test, 2) #change label to binary / categorical
+  st.session_state.X_train = X_train
+  st.session_state.y_train = y_train
+  st.session_state.X_test = X_test
+  st.session_state.y_test = y_test
